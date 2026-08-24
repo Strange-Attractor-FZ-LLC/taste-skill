@@ -21,6 +21,34 @@ compatibility: >-
 metadata:
   version: "1.1.0"
   author: Senlin
+manifest:
+  artifact_id: taste-v1
+  artifact_type: skill
+  version: "1.1.0"
+  owner: muj
+  protocol_version_target: "1.0"
+  certification_state: tested
+  approval_policy: user
+  cloud_routing_allowed: true
+  required_telemetry_events:
+    - ARTIFACT_LOADED
+  tool_allowlist:
+    - "mcp__playwright__browser_navigate"
+    - "mcp__playwright__browser_resize"
+    - "mcp__playwright__browser_wait_for"
+    - "mcp__playwright__browser_take_screenshot"
+    - "mcp__playwright__browser_evaluate"
+    - "Bash"
+    - "Read"
+    - "Write"
+  write_scopes:
+    - "{cwd}/*.md"
+    - "{cwd}/*.json"
+    - "{cwd}/*-viewport.jpeg"
+    - "{cwd}/*-fullpage.jpeg"
+    - "{cwd}/*-mid.jpeg"
+    - "{cwd}/*-footer.jpeg"
+  read_scopes: []
 ---
 
 # Taste — Reverse-Engineer a Website's Design DNA
